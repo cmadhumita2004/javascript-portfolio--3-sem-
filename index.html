@@ -1,0 +1,379 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Random Quote Generator | Student Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <a href="#home" class="logo">Quote<span>Craft</span></a>
+
+            <button class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#generator">Generator</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button id="themeToggle"
+                    class="theme-button"
+                    aria-label="Switch color theme">
+                🌙
+            </button>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Home Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <p class="eyebrow">WELCOME TO MY PORTFOLIO</p>
+
+                <h1>
+                    Words that inspire.<br>
+                    <span>Ideas that grow.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Hello! I'm Madhumita, a Computer Science student
+                    who enjoys programming, web development, and
+                    creating meaningful digital experiences.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#generator" class="btn primary-btn">
+                        Explore Quotes
+                    </a>
+
+                    <a href="#about" class="btn secondary-btn">
+                        About Me
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-decoration" aria-hidden="true">
+                <span>“</span>
+                <p>Every great idea<br>starts with a thought.</p>
+                <div class="decoration-line"></div>
+            </div>
+        </section>
+
+        <!-- Random Quote Generator -->
+        <section id="generator" class="section">
+            <div class="section-heading">
+                <p class="eyebrow">A LITTLE INSPIRATION</p>
+                <h2>Random Quote Generator</h2>
+
+                <p>
+                    Discover a new thought to brighten your day.
+                </p>
+            </div>
+
+            <div class="quote-card">
+                <span class="quote-mark" aria-hidden="true">“</span>
+
+                <p id="quoteText" aria-live="polite">
+                    Believe you can and you're halfway there.
+                </p>
+
+                <p id="quoteAuthor" class="quote-author">
+                    — Theodore Roosevelt
+                </p>
+
+                <div class="quote-divider"></div>
+
+                <div class="quote-actions">
+                    <button id="favoriteBtn"
+                            class="icon-button"
+                            aria-label="Add quote to favorites"
+                            aria-pressed="false">
+                        ♡ Favorite
+                    </button>
+
+                    <button id="copyBtn" class="icon-button">
+                        📋 Copy
+                    </button>
+                </div>
+
+                <button id="newQuoteBtn" class="btn primary-btn new-quote">
+                    ✨ Generate New Quote
+                </button>
+
+                <p id="message" class="message" role="status"></p>
+            </div>
+
+            <div class="favorites-area">
+                <h3>My Favorite Quotes</h3>
+
+                <p id="favoritesEmpty">
+                    Your favorite quotes will appear here.
+                </p>
+
+                <ul id="favoritesList" class="favorites-list"></ul>
+
+                <button id="clearFavoritesBtn"
+                        class="text-button"
+                        hidden>
+                    Clear Favorites
+                </button>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about-section">
+            <div class="section-heading">
+                <p class="eyebrow">GET TO KNOW ME</p>
+                <h2>About Me</h2>
+            </div>
+
+            <div class="about-card">
+                <div class="about-symbol" aria-hidden="true">✦</div>
+
+                <div>
+                    <h3>Hello, I'm Madhumita!</h3>
+
+                    <p>
+                        I am a Computer Science student at KGISL College
+                        of Arts and Science. I am interested in programming,
+                        web development, and learning new technologies.
+                    </p>
+
+                    <p>
+                        This Random Quote Generator is a web development
+                        project created to practice HTML, CSS, and
+                        JavaScript. Through this project, I aim to improve
+                        my problem-solving skills and build interactive,
+                        user-friendly websites.
+                    </p>
+
+                    <p>
+                        My goal is to continue learning, explore new ideas,
+                        and develop useful applications.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="section-heading">
+                <p class="eyebrow">WHAT I'M LEARNING</p>
+                <h2>My Skills</h2>
+            </div>
+
+            <div class="skills-grid">
+                <article class="skill-card">
+                    <span class="skill-icon" aria-hidden="true">🌐</span>
+                    <h3>Web Development</h3>
+                    <p>HTML, CSS, JavaScript</p>
+                </article>
+
+                <article class="skill-card">
+                    <span class="skill-icon" aria-hidden="true">💻</span>
+                    <h3>Programming</h3>
+                    <p>C, Python, Java</p>
+                </article>
+
+                <article class="skill-card">
+                    <span class="skill-icon" aria-hidden="true">🧩</span>
+                    <h3>Problem Solving</h3>
+                    <p>Data Structures and Logical Thinking</p>
+                </article>
+
+                <article class="skill-card">
+                    <span class="skill-icon" aria-hidden="true">🤝</span>
+                    <h3>Collaboration</h3>
+                    <p>Teamwork and Continuous Learning</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects-section">
+            <div class="section-heading">
+                <p class="eyebrow">WHAT I'VE BUILT</p>
+                <h2>My Projects</h2>
+                <p>Some projects that reflect my learning journey.</p>
+            </div>
+
+            <div class="projects-grid">
+
+                <article class="project-card">
+                    <div class="project-visual purple-visual"
+                         aria-hidden="true">
+                        ❝
+                    </div>
+
+                    <div class="project-content">
+                        <span class="project-tag">Web Development</span>
+                        <h3>Random Quote Generator</h3>
+
+                        <p>
+                            An interactive website that displays random
+                            inspirational quotes and allows users to
+                            copy and save their favorites.
+                        </p>
+
+                        <p class="project-tools">
+                            HTML · CSS · JavaScript
+                        </p>
+
+                        <a href="#generator" class="project-link">
+                            Try the Generator →
+                        </a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-visual pink-visual"
+                         aria-hidden="true">
+                        📚
+                    </div>
+
+                    <div class="project-content">
+                        <span class="project-tag">Java</span>
+                        <h3>Library Management System</h3>
+
+                        <p>
+                            A Java Swing project designed to manage
+                            book borrowing, returns, and fine calculation.
+                        </p>
+
+                        <p class="project-tools">
+                            Java · Swing · File Handling
+                        </p>
+
+                        <span class="project-link">
+                            College Project
+                        </span>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-visual blue-visual"
+                         aria-hidden="true">
+                        &lt;/&gt;
+                    </div>
+
+                    <div class="project-content">
+                        <span class="project-tag">Programming</span>
+                        <h3>Data Structures Case Study</h3>
+
+                        <p>
+                            A learning project exploring data structures
+                            and their applications in problem-solving.
+                        </p>
+
+                        <p class="project-tools">
+                            C · Data Structures
+                        </p>
+
+                        <span class="project-link">
+                            Academic Project
+                        </span>
+                    </div>
+                </article>
+
+            </div>
+
+            <p class="project-note">
+                Note: The project cards describe projects for presentation.
+                Add working project links or screenshots when available.
+            </p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="section-heading">
+                <p class="eyebrow">LET'S CONNECT</p>
+                <h2>Contact Me</h2>
+
+                <p>
+                    Have a question or want to discuss a project?
+                    Feel free to get in touch.
+                </p>
+            </div>
+
+            <div class="contact-card">
+                <form id="contactForm">
+                    <label for="visitorName">Your Name</label>
+
+                    <input type="text"
+                           id="visitorName"
+                           name="visitorName"
+                           placeholder="Enter your name"
+                           required>
+
+                    <label for="visitorEmail">Your Email</label>
+
+                    <input type="email"
+                           id="visitorEmail"
+                           name="visitorEmail"
+                           placeholder="Enter your email"
+                           required>
+
+                    <label for="visitorMessage">Your Message</label>
+
+                    <textarea id="visitorMessage"
+                              name="visitorMessage"
+                              rows="4"
+                              placeholder="Write your message"
+                              required></textarea>
+
+                    <button type="submit" class="btn primary-btn">
+                        Submit Message
+                    </button>
+
+                    <p id="formMessage"
+                       class="message"
+                       role="status"></p>
+                </form>
+
+                <p class="contact-email">
+                    Email:
+                    <a href="mailto:cmadhumita2004@gmail.com">
+                        cmadhumita2004@gmail.com
+                    </a>
+                </p>
+
+                <p class="form-note">
+                    This demo form validates your details but does not
+                    send messages to an inbox.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>
+            © <span id="currentYear"></span> Madhumita |
+            Random Quote Generator
+        </p>
+
+        <a href="#home">Back to Top ↑</a>
+    </footer>
+
+</body>
+</html>
